@@ -1,8 +1,8 @@
 food app:
 department model:
-name=
-image
-SLUG
+        name=
+        image
+        SLUG
 
     product model:
         name -chr
@@ -30,22 +30,22 @@ SLUG
         review-text
 
 blog app
-post model:
-author-one to many
-department -one to many
-date
-image
-title
-head_topic
-post
-Share on-fa-tw-inst - gmail -url
-Tag-taggit
+    post model:
+        author-one to many
+        department -one to many
+        date
+        image
+        title
+        head_topic
+        post
+        Share on-fa-tw-inst - gmail -url
+        Tag-taggit
 
 order app:
-Order(models.Model):
-user = models.ForeignKey(User,related_name='order_user',on_delete=models.SET_NULL,null=True,blank=True)
-code = models.CharField(max_length=10,default=generate_code)
-order_time = models.DateTimeField(default=timezone.now)
+    Order(models.Model):
+        user = models.ForeignKey(User,related_name='order_user',on_delete=models.SET_NULL,null=True,blank=True)
+        code = models.CharField(max_length=10,default=generate_code)
+        order_time = models.DateTimeField(default=timezone.now)
 
      OrderDetail(models.Model):
             order = models.ForeignKey(Order,related_name='order_Detail',on_delete=models.CASCADE)
@@ -54,16 +54,29 @@ order_time = models.DateTimeField(default=timezone.now)
             price = models.FloatField()
 
 settings app
-company model:
-name-chr
-logo img
-slogan chr
-Email url
-Phone chr
-Address text
-Open time chr
-fa-tw-inst - gmail url
+    company model:
+        name-chr
+        logo img
+        slogan chr
+        Email url
+        Phone chr
+        Address text
+        Open time chr
+        fa-tw-inst - gmail url
 
      DeliveryFee
         name
         time
+
+**fake data 
+** admin customize account app #user login - sighn - up and reset password
+
+#translations
+
+create api - post man
+debug tool bar
+caching
+
+    
+
+
